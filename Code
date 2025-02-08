@@ -1,0 +1,22 @@
+%%R -w 700 -h 700
+
+
+df$bar_color <- ifelse(df$Country == "Total income of world's richest top-10", "red", "skyblue")
+
+
+ggplot(df, aes(x = reorder(Country, `GDP (Billions of USD)`), y = `GDP (Billions of USD)`, fill = bar_color)) +
+  geom_bar(stat = "identity") +
+  theme_minimal() +
+  labs(
+      title = "Top 10 Richest' Income Surpasses GDP of Most Lower-Middle-Income Countries in 2024",
+      subtitle = "GDP of lower middle-income countries, and total income of top-10 richest men in the world, 2024, Billions of USD",
+      caption = "Source: World Bank, Forbes"
+  ) +
+  theme(
+    plot.title = element_text(size = 16),
+    plot.subtitle = element_text(size = 13),
+    legend.position = "top",
+    axis.text.x = element_text(angle = 90, hjust = 1)
+  ) +
+  scale_fill_manual(values = c("red", "skyblue"))
+
