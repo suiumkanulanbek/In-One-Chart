@@ -1,4 +1,4 @@
-Richest Man in the World Income Visualization (2024)
+World’s Top Billionaires' Combined Income in 2024, dataviz
 
 This project contains a data visualization of the income of the richest man in the world in 2024, created using the ggplot2 package in R. The visualization showcases the income data and data on lower and middle income countries' GDP.
 
